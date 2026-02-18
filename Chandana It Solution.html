@@ -5,22 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Chandana Groups</title>
 
-<!-- Bootstrap 5 CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-
 body{
     background:#e9e6e6;
-    font-family: 'Segoe UI', sans-serif;
+    font-family:'Segoe UI', sans-serif;
 }
 
-/* Main Blue Section */
+/* Main Section */
 .main-section{
     background:#1f1a9c;
-    margin:60px auto;
+    margin:30px auto;
     border-radius:20px;
-    padding:50px;
+    padding:40px;
     color:white;
     box-shadow:0px 15px 30px rgba(0,0,0,0.2);
 }
@@ -34,7 +32,7 @@ body{
 
 .nav-link{
     color:white !important;
-    margin-right:20px;
+    margin-right:15px;
 }
 
 .purchase-btn{
@@ -44,7 +42,7 @@ body{
     padding:6px 18px;
 }
 
-/* Left Content */
+/* Hero Section */
 .hero-title{
     font-size:48px;
     font-weight:700;
@@ -53,7 +51,6 @@ body{
 .hero-text{
     margin-top:20px;
     line-height:1.7;
-    max-width:500px;
 }
 
 .learn-btn{
@@ -69,7 +66,7 @@ body{
     background:#f8f8f8;
     color:black;
     border-radius:25px;
-    padding:30px;
+    padding:25px;
     box-shadow:0px 10px 25px rgba(0,0,0,0.2);
 }
 
@@ -87,7 +84,6 @@ body{
     border-radius:25px;
     padding:10px;
     width:100%;
-    margin-top:10px;
 }
 
 .google-btn{
@@ -105,6 +101,37 @@ body{
     margin-top:10px;
 }
 
+/* Responsive Adjustments */
+@media(max-width:992px){
+    .hero-title{
+        font-size:36px;
+        text-align:center;
+    }
+
+    .hero-text{
+        text-align:center;
+    }
+
+    .learn-btn{
+        display:block;
+        margin:20px auto;
+    }
+
+    .main-section{
+        padding:25px;
+    }
+}
+
+@media(max-width:576px){
+    .hero-title{
+        font-size:28px;
+    }
+
+    .main-section{
+        margin:15px;
+        padding:20px;
+    }
+}
 </style>
 </head>
 <body>
@@ -112,17 +139,22 @@ body{
 <div class="container">
     <div class="main-section">
 
-        <!-- Navbar -->
+        <!-- Responsive Navbar -->
         <nav class="navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">Chandana Groups</a>
-                <div>
-                    <ul class="navbar-nav ms-auto d-flex flex-row align-items-center">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
                         <li class="nav-item"><a class="nav-link" href="#">Overview</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Price</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Feedback</a></li>
-                        <li class="nav-item">
+                        <li class="nav-item mt-2 mt-lg-0">
                             <a class="btn purchase-btn" href="#">Purchase</a>
                         </li>
                     </ul>
@@ -131,10 +163,10 @@ body{
         </nav>
 
         <!-- Content -->
-        <div class="row align-items-center mt-5">
+        <div class="row align-items-center mt-5 text-center text-lg-start">
             
-            <!-- Left Side -->
-            <div class="col-lg-6">
+            <!-- Left -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
                 <h1 class="hero-title">Generate Awesome<br>Web Pages</h1>
                 <p class="hero-text">
                     The most important part of the Startup is the samples. 
@@ -144,15 +176,15 @@ body{
                 <button class="btn learn-btn text-white">Learn More</button>
             </div>
 
-            <!-- Right Side -->
-            <div class="col-lg-6 mt-4 mt-lg-0">
+            <!-- Right -->
+            <div class="col-lg-6">
                 <div class="signup-card">
                     <h4 class="text-center mb-4">Sign Up Now</h4>
                     <form>
                         <input type="email" class="form-control" placeholder="Your Email">
                         <input type="password" class="form-control" placeholder="Your Password">
 
-                        <div class="form-check mb-3">
+                        <div class="form-check mb-3 text-start">
                             <input class="form-check-input" type="checkbox">
                             <label class="form-check-label small-text">
                                 I agree to the terms of services
@@ -174,7 +206,6 @@ body{
     </div>
 </div>
 
-<!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
